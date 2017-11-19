@@ -1,0 +1,33 @@
+= Playground Java Vanilla
+
+== Disclaimer
+Current source code and version is published without license. +
+If you (somebody) want to use this in his project please contact me.
+Afterwards I will grant the use of this code without warranty.
+When I find some time to inform myself about the different possible licenses at link:http://choosealicense.com[choosealicense.com]
+I will probably change to a suitable license.
+
+== General information
+This `Java Vanilla Playground` project is a playground for Java samples which only use `plain (vanilla) Java features` (i.e. without any external dependencies).
+
+
+== Technical information
+  * The release versions are based on link:http://semver.org[Semantic Versioning 2.0.0].
+  * The latest release require `JavaEE 7` (or newer) and is build with link:https://maven.apache.org[Maven] (version `3.3.x`).
+
+
+== Current Features / Samples _(for this branch)_
+
+  * Java 8 - Streams...
+
+== New and Noteworthy
+
+  * *nothing*
+
+== Roadmap
+
+  * *none*
+
+== Interesting Links/Blogs/Tutorial related to this playground project
+
+  * ...
