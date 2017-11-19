@@ -30,4 +30,5 @@ This `Java Vanilla Playground` project is a playground for Java samples which on
 
 == Interesting Links/Blogs/Tutorial related to this playground project
 
-  * ...
+  * link:http://junit.org/junit5/docs/current/user-guide/[JUnit 5 User Guide]
+  * link:http://www.baeldung.com/junit-5[JUnit 5: Baeldung Guide]
