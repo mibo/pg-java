@@ -1,0 +1,14 @@
+= Presentation
+
+== Prerequisites
+Requires installed and configured link:https://github.com/asciidoctor/asciidoctor-deck.js[asciidoctor-deck.js].
+
+Documentation for link:https://asciidoctor.cn/docs/install-and-use-deckjs-backend/[Asciidoctor].
+
+== Render presentation
+
+  . `git clone --depth=1 --single-branch https://github.com/asciidoctor/asciidoctor-deck.js`
+  ** _(Optional:)_ remove not necessary `.git`: `rm -rf ./asciidoctor-deck.js/.git`
+  . `git clone --depth=1 --single-branch https://github.com/imakewebthings/deck.js.git`
+  ** _(Optional:)_ remove not necessary `.git`: `rm -rf ./deck.js/.git`
+  . `asciidoctor -T asciidoctor-deck.js/templates/haml presentation.adoc`

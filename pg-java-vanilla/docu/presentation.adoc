@@ -1,0 +1,133 @@
+= Java 8: The new parts...
+:coderay-css: style
+:source-highlighter: coderay
+:deckjs_theme: swiss
+//:deckjs_theme: [neon, web-2.0, swiss]
+mibo
+
+== Lambdas: Basics
+// https://youtu.be/wOks4LW6I24?t=137
+
+  * _formerly known as_: Anonymous inner classes
+  * Block of code
+  * TBD
+
+
+== Lambdas: Samples
+// https://youtu.be/wOks4LW6I24?t=187
+
+[%step,subs=+quotes]
+```java
+List<Message> messages = receiveMessages();
+Collections.sort(messages, new Comparator<Message>() {
+  @Override
+  public int compare(Message m1, Message m2) {
+    return m1.getAddress().compareTo(m2.getAddress());
+  }
+});
+```
+
+[%step,subs=+quotes]
+```java
+List<Message> messages = receiveMessages();
+Collections.sort(messages, new Comparator<Message>() {
+  @Override
+-> *public int compare(Message m1, Message m2) {*
+->   *return m1.getAddress().compareTo(m2.getAddress());*
+  }
+});
+```
+
+== Lambdas: Samples
+
+[%step]
+```java
+List<Message> messages = receiveMessages();
+Collections.sort(messages, 
+  
+    (Message m1, Message m2) -> 
+      m1.getAddress().compareTo(m2.getAddress())
+
+);
+```
+
+[%step]
+```java
+List<Message> messages = receiveMessages();
+messages.sort((m1, m2) -> m1.getAddress().compareTo(m2.getAddress())));
+```
+
+== Lambdas: Predefined
+
+  * `java.util.functions`
+  ** `.Predicate<T>`
+  ** `.Function<T, R>`
+
+== Functional interfaces
+
+  * Marker interface for Lambdas
+
+// prefer immutability
+
+== Exceptions in Lambdas
+// https://youtu.be/wOks4LW6I24?t=750
+
+== Optional<T>
+
+== Streams
+// https://youtu.be/wOks4LW6I24?t=1345
+
+[%step]
+.For-Loop (imperative)
+```java
+List<String> data = createData("Hello::", 20);
+
+List<String> filtered = new ArrayList<>();
+for (String datum : data) {
+  if(datum.contains("2")) {
+    filtered.add(datum);
+  }
+}
+```
+
+//```
+//List<String> data = createData("Hello::", 20);
+//
+//data.stream()
+//    .filter(str -> str.contains("2"))
+//    .forEach(System.out::println);
+//```
+
+[%step]
+.Lambda/Stream (declarative)
+```java
+List<String> streamFiltered = data.stream()
+    .filter(str -> str.contains("2"))
+    .collect(Collectors.toList());
+```
+
+== Lambdas: The Bad 
+ 
+  * Debugging is painful
+
+== Method references
+
+== Interfaces: `static` Methods
+
+== Interfaces: `default` Methods
+
+== Date and Time (not so relevant)
+
+== Minor updates / changes
+// https://youtu.be/wOks4LW6I24?t=2098
+// https://youtu.be/wOks4LW6I24?t=2153
+  
+  * Base64
+  * CompletableFuture
+  * ...
+  * Enhanced annotations
+  * Reflection on method parameters
+  * No PermGen in JVM
+
+== Summary
+//https://youtu.be/wOks4LW6I24?t=2263
